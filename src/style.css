@@ -32,6 +32,14 @@ ul {
   margin: 30px 0;
 }
 
+.title {
+  padding: 10px;
+}
+
+.title i {
+  color: #c1bfbf;
+}
+
 .tasks section {
   background-color: #fff;
   width: 70%;
@@ -80,8 +88,6 @@ ul {
 
 .task .label {
   width: 100%;
-
-  /* padding: 15px 0px; */
   line-height: 20px;
   word-wrap: break-word;
 }
@@ -95,8 +101,4 @@ ul {
   cursor: move;
 
   /* font-size: 10px; */
-}
-
-.tasks h1 {
-  padding: 40px;
 }

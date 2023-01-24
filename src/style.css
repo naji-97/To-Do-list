@@ -45,7 +45,7 @@ ul {
 }
 
 .form {
-  padding: 0 0 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .add-task input {
@@ -58,7 +58,7 @@ ul {
 }
 
 .add-task input::placeholder {
-  font-size: 18px;
+  font-size: 15px;
   color: #c1bfbf;
 }
 

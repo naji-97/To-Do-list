@@ -25,11 +25,7 @@ const tasks = [
   },
 ];
 const taskList = document.querySelector('.task-list');
-// const taskListLi = document.createElement('li');
 const checkboxInput = document.createElement('input');
-// const checkedInput = document.getElementById('checked');
-// const labelTask = document.createElement('label');
-// const plusIcon = document.createElement('i');
 
 const generateTask = () => {
   for (let i = 0; i < tasks.length; i += 1) {
@@ -44,11 +40,3 @@ const generateTask = () => {
 };
 
 window.onload = generateTask();
-
-// function uncheckAllBoxes() {
-//   var input = document.querySelectorAll(".checkbox");
-//   for (var i = 0; i < input.length; i++) {
-//     input[i].checked = false;
-//   }
-//   this.onclick = checkAllBoxes;
-// }

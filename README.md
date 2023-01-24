@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [CapstoneProject] <a name="capstone-project"></a>
+# 📖 [Todo List] <a name="capstone-project"></a>
 
-> This is Conference page made for my first capstone project.
+> This is Todo List for my first capstone project.
 **[CapstoneProject]** is a...
 ## 🛠 Built With <a name="built-with">HTML, CSS & JavaScript</a>
 

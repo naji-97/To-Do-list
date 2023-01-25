@@ -16,10 +16,22 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.delete {
+  display: none;
+}
+
+.active {
+  display: inline;
 }
 
 .tasks {
@@ -43,7 +55,8 @@ ul {
 .tasks section {
   background-color: #fff;
   width: 70%;
-  padding: 30px;
+  padding: 10px;
+  padding-bottom: 0;
   border-radius: 3px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
@@ -75,7 +88,7 @@ ul {
   color: #c1bfbf;
 }
 
-.task {
+.task-list li {
   position: relative;
   background-color: #fff;
   padding: 0 49px 0 1em;
@@ -86,19 +99,26 @@ ul {
   letter-spacing: 1px;
 }
 
-.task .label {
-  width: 100%;
+.task-list li .label {
   line-height: 20px;
   word-wrap: break-word;
 }
 
-.task i {
+.task-list li i {
   opacity: 0.2;
   float: right;
   margin-right: -3em;
   padding: 0 0.5rem;
   line-height: 0;
-  cursor: move;
+  cursor: pointer;
+}
 
-  /* font-size: 10px; */
+.clear-all {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding: 10px;
+  border: none;
+  margin-right: -10px;
+  margin-left: -10px;
+  width: 103.5%;
 }

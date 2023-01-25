@@ -1,7 +1,7 @@
-// eslint-disable-next-line max-classes-per-file
+/* eslint-disable max-classes-per-file */
+
 class Tasks {
   constructor(description, completed = false, index) {
-    // eslint-disable-next-line no-unused-expressions
     (this.description = description);
     (this.completed = completed);
     (this.index = index);
@@ -53,29 +53,22 @@ class Todolist {
       moveBtn[elem.index].setAttribute('id', elem.index);
       moveBtn[elem.index].innerHTML = '<i class="fa-solid fa-ellipsis-vertical ellipsis"></i>';
 
-      // const deleteBtn = [];
-      // deleteBtn[elem.index] = document.createElement('i');
-      // deleteBtn[elem.index].setAttribute('id', elem.index);
-      // deleteBtn[elem.index].classList.add('fa-regular fa-trash-can delete');
       li[elem.index].append(
         inputBox[elem.index],
         label[elem.index],
-        // deleteBtn[elem.index],
         moveBtn[elem.index],
       );
       taskList.append(li[elem.index]);
       li[elem.index].addEventListener('click', () => {
         li[elem.index].style.backgroundColor = '#ff98008f';
+      });
+      label[elem.index].addEventListener('click', (e) => {
+        e.target.nextSibling.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        e.target.nextSibling.style.cursor = 'pointer';
 
-        label[elem.index].addEventListener('click', (e) => {
-          e.target.nextSibling.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-          e.target.nextSibling.style.cursor = 'pointer';
-
-          // deleteBtn[elem.index].classList.add('active');
-          e.target.nextSibling.addEventListener('click', () => {
-            li[elem.index].remove();
-            this.removetask(elem.index);
-          });
+        e.target.nextSibling.addEventListener('click', () => {
+          li[elem.index].remove();
+          this.removetask(elem.index);
         });
       });
       li[elem.index].addEventListener('mouseleave', (e) => {
@@ -148,7 +141,6 @@ class Todolist {
     });
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
-      // eslint-disable-next-line no-unused-expressions
       window.location.reload()();
     }
   }
@@ -160,7 +152,6 @@ const completed = false;
 const entryTask = new Todolist();
 
 const newItemInput = document.querySelector('#new-item');
-// const taskList = document.querySelector('.task-list');
 const btnAddNewTask = document.querySelector('.btn-add');
 btnAddNewTask.addEventListener('click', () => {
   if (newItemInput.value === '') {
@@ -188,36 +179,3 @@ clearAllTaskBtn.addEventListener('click', (e) => {
   e.preventDefault();
   window.location.reload();
 });
-// const createItem = (item) => {
-//   tasksArr.push(item.value);
-//   localStorage.setItem('tasks', JSON.stringify(tasksArr));
-//   location.reload();
-// };
-// document.querySelector('.btn-add').addEventListener('click', Todolist.addtask(new Tasks()));
-
-// const displayItem = () => {
-//   let items = '';
-//   for (let i = 0; i < tasksArr.length; i+ =1) {
-//     const item = tasksArr[i];
-//     items += `<li class="task flex">
-//     <input type="checkbox" id="checked" name="checked" >
-//     <label class="label" id="label" for="checked">${item}</label>
-//     <i class="fa-solid fa-ellipsis-vertical ellipsis"></i>
-//     <i class="fa-solid fa-ellipsis-vertical deleteBtn"></i>
-//     </li>`;
-//     taskList.innerHTML = items;
-//   }
-// };
-
-// window.onload = displayItem();
-// activateDeleteListeners();
-
-// let activateDeleteListeners = () => {
-//   const deleteBtn = document.querySelectorAll('.deleteBtn');
-//   deleteBtn.forEach((db, i) => {
-
-//   });
-// };
-// console.log(tasksArr);
-// window.onload = Todolist.displayTask
-// console.log('ggggggggggggg');

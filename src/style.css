@@ -102,6 +102,7 @@ button {
 .task-list li .label {
   line-height: 20px;
   word-wrap: break-word;
+  padding: 0 100px;
 }
 
 .task-list li i {
@@ -121,4 +122,9 @@ button {
   margin-right: -10px;
   margin-left: -10px;
   width: 103.5%;
+  font-size: 17px;
+}
+
+.clear-all:hover {
+  text-decoration: underline;
 }

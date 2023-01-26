@@ -159,3 +159,9 @@ clearAllTaskBtn.addEventListener('click', (e) => {
   e.preventDefault();
   window.location.reload();
 });
+
+const clearAllBtn = document.querySelector('.delete-all');
+clearAllBtn.addEventListener('click', () => {
+  window.localStorage.clear();
+  window.location.reload();
+});

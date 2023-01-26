@@ -125,6 +125,10 @@ button {
   font-size: 17px;
 }
 
+.delete-all {
+  cursor: pointer;
+}
+
 .clear-all:hover {
   text-decoration: underline;
 }

@@ -1,26 +1,5 @@
-/* eslint-disable max-classes-per-file */
-
-class Tasks {
-  constructor(description, completed = false, index) {
-    (this.description = description);
-    (this.completed = completed);
-    (this.index = index);
-  }
-}
-
-class TaskStatus {
-  constructor() {
-    this.completed = false;
-  }
-
-  checked = (task) => {
-    task.completed = true;
-  };
-
-  unchecked = (task) => {
-    task.completed = false;
-  };
-}
+import Tasks from './tasks.js';
+import TaskStatus from './taskStatus.js';
 
 class Todolist {
   constructor() {
@@ -98,7 +77,8 @@ class Todolist {
   };
 
   addtask = (description, completed, index) => {
-    const newtask = new Tasks(description, completed, index += this.taskData.length);
+    index = this.taskData.length;
+    const newtask = new Tasks(description, completed, index);
     this.taskData.push(newtask);
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
@@ -158,10 +138,9 @@ btnAddNewTask.addEventListener('click', () => {
     btnAddNewTask.setCustomValidity('This is required field!');
   } else {
     entryTask.addtask(newItemInput.value, completed, index);
-    // index = entryTask.taskData.length;
+    index += 1;
     entryTask.displayTask();
     newItemInput.value = '';
-    index += 1;
   }
 });
 

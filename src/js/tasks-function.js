@@ -98,7 +98,7 @@ class Todolist {
   };
 
   addtask = (description, completed, index) => {
-    const newtask = new Tasks(description, completed, index);
+    const newtask = new Tasks(description, completed, index += this.taskData.length);
     this.taskData.push(newtask);
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
@@ -113,7 +113,7 @@ class Todolist {
       this.taskData.splice(key, 1);
     }
     this.taskData.forEach((elem, index) => {
-      elem.index = index;
+      elem.index = index + 1;
     });
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
@@ -147,9 +147,9 @@ class Todolist {
 }
 
 // Add New Task and Display it
-let index = 0;
 const completed = false;
 const entryTask = new Todolist();
+let index = 1;
 
 const newItemInput = document.querySelector('#new-item');
 const btnAddNewTask = document.querySelector('.btn-add');
@@ -158,6 +158,7 @@ btnAddNewTask.addEventListener('click', () => {
     btnAddNewTask.setCustomValidity('This is required field!');
   } else {
     entryTask.addtask(newItemInput.value, completed, index);
+    // index = entryTask.taskData.length;
     entryTask.displayTask();
     newItemInput.value = '';
     index += 1;

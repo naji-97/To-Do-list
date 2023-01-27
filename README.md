@@ -31,10 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Todo List] <a name="capstone-project"></a>
+# 📖 Todo List <a name="capstone-project"></a>
 
 > This is Todo List for my first capstone project.
-**[CapstoneProject]** is a...
 ## 🛠 Built With <a name="built-with">HTML, CSS & JavaScript</a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -67,13 +66,6 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
-```sh
- gem install rails
-```
- -->
-
 ### Setup
 
 Clone this repository to your desired folder:
@@ -88,14 +80,7 @@ Clone this repository to your desired folder:
 ### Install
 
 Install this project with:
-
-<!--
-Example command:
-```sh
-  cd my-project
-  gem install
-```
---->
+  git clone https://github.com/naji-97/To-Do-list.git
 
 ### Usage
 

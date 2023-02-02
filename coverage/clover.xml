@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675334360682" clover="3.2.0">
-  <project timestamp="1675334360683" name="All files">
+<coverage generated="1675340765723" clover="3.2.0">
+  <project timestamp="1675340765724" name="All files">
     <metrics statements="89" coveredstatements="73" conditionals="25" coveredconditionals="15" methods="20" coveredmethods="14" elements="134" coveredelements="102" complexity="0" loc="89" ncloc="89" packages="1" files="3" classes="3"/>
     <file name="taskStatus.js" path="D:\miccrovers\module-2\To-Do-List\To-Do-list\src\js\taskStatus.js">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>

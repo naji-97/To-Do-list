@@ -121,7 +121,7 @@ export default class Todolist {
     });
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
-      window.location.reload();
+      window.location.reload(true);
     }
   }
 }

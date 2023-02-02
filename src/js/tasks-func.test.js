@@ -50,3 +50,15 @@ describe('Remove task', () => {
     expect(task.taskData).toHaveLength(2);
   });
 });
+describe('Editing', () => {
+  test('Editing task', () => {
+    const task = new Todolist();
+    task.addtask('Microverse', false, 0);
+    task.addtask('Microverse1', false, 1);
+    task.addtask('Microverse2', false, 2);
+    task.updateTask(2, 'Microverse2');
+    task.taskData[2].description = 'Launch Break';
+    // task.removetask(1);
+    expect(task.taskData[2].description).toEqual('Launch Break');
+  });
+ });

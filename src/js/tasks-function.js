@@ -1,7 +1,7 @@
 import Tasks from './tasks.js';
 import TaskStatus from './taskStatus.js';
 
-class Todolist {
+export default class Todolist {
   constructor() {
     this.taskData = [];
   }
@@ -65,11 +65,11 @@ class Todolist {
           e.target.nextSibling.innerText,
         );
       });
-      if (this.taskData[elem.index].completed === true) {
+      if (this.taskData[elem.index] && this.taskData[elem.index].completed === true) {
         inputBox[elem.index].setAttribute('checked', 'checked');
         li[elem.index].classList.add('checked');
         label[elem.index].style.textDecoration = 'line-through';
-      } else if (this.taskData[elem.index].completed === false) {
+      } else if (this.taskData[elem.index] && this.taskData[elem.index].completed === false) {
         inputBox[elem.index].removeAttribute('checked');
         label[elem.index].style.textDecoration = 'none';
       }
@@ -121,47 +121,7 @@ class Todolist {
     });
     if (typeof window !== 'undefined') {
       localStorage.setItem('TodoListDB', JSON.stringify(this.taskData));
-      window.location.reload()();
+      window.location.reload();
     }
   }
 }
-
-// Add New Task and Display it
-const completed = false;
-const entryTask = new Todolist();
-let index = 1;
-
-const newItemInput = document.querySelector('#new-item');
-const btnAddNewTask = document.querySelector('.btn-add');
-btnAddNewTask.addEventListener('click', () => {
-  if (newItemInput.value === '') {
-    btnAddNewTask.setCustomValidity('This is required field!');
-  } else {
-    entryTask.addtask(newItemInput.value, completed, index);
-    index += 1;
-    entryTask.displayTask();
-    newItemInput.value = '';
-  }
-});
-
-window.onload = () => {
-  entryTask.taskData = JSON.parse(localStorage.getItem('TodoListDB' || []));
-  if (entryTask.taskData === null) {
-    entryTask.taskData = [];
-    return;
-  }
-  entryTask.displayTask();
-};
-
-const clearAllTaskBtn = document.querySelector('.clear-all');
-clearAllTaskBtn.addEventListener('click', (e) => {
-  entryTask.clearAllCompletTask();
-  e.preventDefault();
-  window.location.reload();
-});
-
-const clearAllBtn = document.querySelector('.delete-all');
-clearAllBtn.addEventListener('click', () => {
-  window.localStorage.clear();
-  window.location.reload();
-});

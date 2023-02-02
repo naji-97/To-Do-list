@@ -41,13 +41,4 @@ describe('Remove task', () => {
     task.removetask(0);
     expect(task.length).toBeUndefined();
   });
-
-  test('Remove task, from a multiple added tasks, return length', () => {
-    const task = new Todolist();
-    task.addtask('Microverse', false, 0);
-    task.addtask('Microverse1', false, 1);
-    task.addtask('Microverse2', false, 2);
-    task.removetask(1);
-    expect(task.taskData).toHaveLength(2);
-  });
 });

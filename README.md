@@ -143,6 +143,26 @@ Example:
 - [ ] **[Adding and deleting list]**
 - [ ] **[Testing using jest]**
 
+👤 **Habtamu Birru**
+- GitHub: [@Habtamu210](https://github.com/Habtamu210)
+- Twitter: [@beleyaha](https://twitter.com/beleyaha)
+- LinkedIn: [Habtamu Birru](https://linkedin.com/in/habtamu-birru-4187ab20/)
+
+👤 **Divine Asiriuwa**
+- GitHub: [@Divinity-dev](https://github.com/Divinity-dev)
+- LinkedIn: [Divine Asiriuwa](https://www.linkedin.com/in/divine-asiriuwa-a87227a3/)
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+
+- [ ] **[Developing to-do list]**
+- [ ] **[Adding and deleting list]**
+- [ ] **[Testing using jest]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -59,7 +59,6 @@ describe('Editing', () => {
     task.addtask('Microverse2', false, 2);
     task.updateTask(2, 'Microverse2');
     task.taskData[2].description = 'Launch Break';
-    // task.removetask(1);
     expect(task.taskData[2].description).toEqual('Launch Break');
   });
 });
@@ -79,5 +78,17 @@ describe('Updating task', () => {
     task.addtask('Microverse1', false, 1);
     status.unchecked(task.taskData[0]);
     expect(task.taskData[0].completed).toEqual(false);
+  });
+});
+
+describe('Clear task', () => {
+  test('Clear all completed', () => {
+    const task = new Todolist();
+    const status = new TaskStatus();
+    task.addtask('Morining', true, 0);
+    task.addtask('Microverse1', false, 1);
+    status.checked(task.taskData[1]);
+    task.clearAllCompletTask();
+    expect(task.taskData.length).toEqual(0);
   });
 });

@@ -1,6 +1,5 @@
 // import _ from 'lodash';
 import './style.css';
-import './js/tasks-function.js';
 import Todolist from './js/tasks-function.js';
 
 // Add New Task and Display it

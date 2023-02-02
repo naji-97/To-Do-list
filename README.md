@@ -123,6 +123,11 @@ Example:
 - GitHub: [@githubhandle](https://github.com/naji-97/)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/naji-ali-329065/)
 
+👤 **Habtamu Birru**
+- GitHub: [@Habtamu210](https://github.com/Habtamu210)
+- Twitter: [@beleyaha](https://twitter.com/beleyaha)
+- LinkedIn: [Habtamu Birru](https://linkedin.com/in/habtamu-birru-4187ab20/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
